@@ -36,7 +36,4 @@ router.get('/:date', (req, res) => {
   res.json(getDate(req.params.date));
 });
 
-app.use(express.static( __dirname + '/public'));
-
-
 module.exports = router;
