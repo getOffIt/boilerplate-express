@@ -8,6 +8,6 @@
 		"start": "node server.js"
 	},
 	"engines": {
-		"node": "4.4.5"
+		"node": "12.10.0"
 	}
 }
