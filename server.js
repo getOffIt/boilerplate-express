@@ -52,11 +52,7 @@ const ignoreRequests = (req, res, next) => {
 app.use(ignoreRequests);
 app.use(timestampHandler);
 
-// Respond not found to all the wrong routes
-app.use(function(req, res, next){
-  res.status(404);
-  res.type('txt').send('Not found');
-});
+
 
 // Error Middleware
 app.use(function(err, req, res, next) {
@@ -67,7 +63,15 @@ app.use(function(err, req, res, next) {
   }  
 })
 
+// Respond not found to all the wrong routes
+app.use(function(req, res, next){
+  res.status(404);
+  console.log("404 error");
+  res.type('txt').send('Not found');
+});
+
 app.listen(process.env.PORT, function () {
   console.log("env has message: " + process.env.PORTMESSAGE);
   console.log('Node.js listening ... on port: ' + process.env.PORT);
 });
+

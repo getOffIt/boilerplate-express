@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router();
+const app = express.Router();
 
 const getNullResponse = () => ({unix: null, natural: null})
 
@@ -32,8 +32,8 @@ const getDate = param => {
   };
 };
 
-router.get('/:date', (req, res) => {
+app.get('/:date', (req, res) => {
   res.json(getDate(req.params.date));
 });
 
-module.exports = router;
+module.exports = app;
