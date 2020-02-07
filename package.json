@@ -1,7 +1,11 @@
 {
 	"name": "fcc-learn-npm-package-json",
 	"dependencies": {
+		"dotenv": "^8.2.0",
 		"express": "^4.14.0"
+	},
+	"devDependencies": {
+		"nodemon": "2.0.2"
 	},
 	"main": "server.js",
 	"scripts": {

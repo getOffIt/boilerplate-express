@@ -8,6 +8,7 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
+require('dotenv').config();
 
 const timestampHandler = require('./timestamp-route-handler');
 
@@ -67,5 +68,6 @@ app.use(function(err, req, res, next) {
 })
 
 app.listen(process.env.PORT, function () {
+  console.log("env has message: " + process.env.PORTMESSAGE);
   console.log('Node.js listening ... on port: ' + process.env.PORT);
 });
