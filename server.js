@@ -35,10 +35,10 @@ app.route('/_api/package.json')
     });
   });
   
-app.route('/')
-    .get(function(req, res) {
-		  res.sendFile(__dirname + '/views/index.html');
-    })
+  app.get('/', function (req, res) {
+    const absolutePath = __dirname + '/views/index.html';
+    res.sendFile(absolutePath);
+  });
 
 const ignoreRequests = (req, res, next) => {
   if (/(favicon.ico|robots.txt)/.test(req.originalUrl)) {
@@ -67,5 +67,5 @@ app.use(function(err, req, res, next) {
 })
 
 app.listen(process.env.PORT, function () {
-  console.log('Node.js listening ...');
+  console.log('Node.js listening ... on port: ' + process.env.PORT);
 });
