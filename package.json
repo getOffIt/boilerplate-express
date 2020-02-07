@@ -1,9 +1,6 @@
 {
-	"name": "learning",
-	"version": "0.1.0",
+	"name": "fcc-learn-npm-package-json",
 	"dependencies": {
-		"body-parser": "^1.15.2",
-		"cookie-parser": "^1.4.3",
 		"express": "^4.14.0"
 	},
 	"main": "server.js",
@@ -11,6 +8,10 @@
 		"start": "node server.js"
 	},
 	"engines": {
-		"node": "^4.7.0"
+		"node": "4.4.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
 	}
 }
